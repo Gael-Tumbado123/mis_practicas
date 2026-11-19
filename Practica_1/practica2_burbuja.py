@@ -1,24 +1,23 @@
-lista = [9.7, 8.9, 9.1, 7.6, 8.5, 9.3, 10, 8.8, 9.2, 9.5, 6.7, 7.5, 7.9, 9.9, 8.1]
-print(lista)
+calificaciones = [9.2,8.5,8.3,9.0,8.6,8.8,9.8,10.0,8.1,10.0,9.6,9.3,10.0,8.4,10.0]
+n = len(calificaciones)
 swapped = True
 while swapped:
-    swapped = False
-for i in range(len(lista)):
-    for x in range(len(lista)-1):
-        if lista[x]>lista[x+1]:
-            aux=lista[x]
-            lista[x]=lista[x+1]
-            lista[x+1]=aux
-            swapped = True
-print("orden acendente: ", lista)
+    swapped=False
+for i in range(n-1):
+    if calificaciones[i]>calificaciones[i+1]:
+        calificaciones[i],calificaciones[i+1]=calificaciones[i+1],calificaciones[i]
+        swapped=True
+print("Orden Ascendente:",calificaciones)
+
+#orden descendente
+calificaciones = [9.2,8.5,8.3,9.0,8.6,8.8,9.8,10.0,8.1,10.0,9.6,9.3,10.0,8.4,10.0]
 swapped = True
 while swapped:
-    swapped = False
-for i in range(len(lista)):
-    for x in range(len(lista)-1):
-        if lista[x]<lista[x+1]:
-            aux=lista[x]
-            lista[x]=lista[x+1]
-            lista[x+1]=aux
-            swapped = True
-print("orden decendente: ", lista)
+    swapped=False
+for i in range(len(calificaciones)):
+    for x in range(len(calificaciones)-1):
+        if calificaciones[x]>calificaciones[x+1]:
+            aux=calificaciones[x]
+            calificaciones[x]=calificaciones[x+1]
+            calificaciones[x+1]=aux
+            print("Orden descendente:",calificaciones)
